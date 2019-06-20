@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -185,6 +191,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WHTCC.EDU.CN.Onlinetest.BLL\WHTCC.EDU.CN.Onlinetest.BLL.csproj">
+      <Project>{8e555fad-d282-4a5c-97da-b32df579a54d}</Project>
+      <Name>WHTCC.EDU.CN.Onlinetest.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WHTCC.EDU.CN.Onlinetest.Entity\WHTCC.EDU.CN.Onlinetest.Entity.csproj">
+      <Project>{bc043750-47b1-4cb6-8d37-00f8cafd2099}</Project>
+      <Name>WHTCC.EDU.CN.Onlinetest.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WHTCC.EDU.CN.Onlinetest.Utility\WHTCC.EDU.CN.Onlinetest.Utility.csproj">
+      <Project>{a6abc886-dc97-4ddf-abd6-fbdb90f224fa}</Project>
+      <Name>WHTCC.EDU.CN.Onlinetest.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

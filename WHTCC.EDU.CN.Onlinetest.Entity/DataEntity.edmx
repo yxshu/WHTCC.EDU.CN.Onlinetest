@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DataEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EntityNameSpace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Authority">
           <Key>
             <PropertyRef Name="Id" />
@@ -838,7 +838,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataEntityStoreContainer">
+        <EntityContainer Name="EntityNameSpaceStoreContainer">
           <EntitySet Name="Authority" EntityType="Self.Authority" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Chapter" EntityType="Self.Chapter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
@@ -1046,7 +1046,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DataEntity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="EntityNameSpace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Authority">
           <Key>
             <PropertyRef Name="Id" />
@@ -1214,7 +1214,7 @@
           <NavigationProperty Name="PaperCode" Relationship="Self.FK__PastExamP__Paper__71D1E811" FromRole="PastExamPaper" ToRole="PaperCode" />
           <NavigationProperty Name="QuestionFORGeneral" Relationship="Self.FK__QuestionF__PastE__08B54D69" FromRole="PastExamPaper" ToRole="QuestionFORGeneral" />
         </EntityType>
-        <EntityType Name="QuestionFORDanxuan" BaseType="DataEntity.QuestionFORGeneral">
+        <EntityType Name="QuestionFORDanxuan" BaseType="EntityNameSpace.QuestionFORGeneral">
           <Property Name="QuestionFORDanxuanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="QuestionFORGeneralId" Type="Int32" Nullable="false" />
           <Property Name="AnswerA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1261,18 +1261,18 @@
           <NavigationProperty Name="VerifyStatus" Relationship="Self.FK__VerifySta__NewQu__19DFD96B" FromRole="QuestionFORGeneral" ToRole="VerifyStatus" />
           <NavigationProperty Name="VerifyStatus1" Relationship="Self.FK__VerifySta__Quest__160F4887" FromRole="QuestionFORGeneral" ToRole="VerifyStatus" />
         </EntityType>
-        <EntityType Name="QuestionFORPanduan" BaseType="DataEntity.QuestionFORGeneral">
+        <EntityType Name="QuestionFORPanduan" BaseType="EntityNameSpace.QuestionFORGeneral">
           <Property Name="QuestionFORPanduanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="QuestionFORGeneralId" Type="Int32" Nullable="false" />
           <Property Name="CorrectAnswer" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="QuestionFORGeneral" Relationship="Self.FK__QuestionF__Quest__0B91BA14" FromRole="QuestionFORPanduan" ToRole="QuestionFORGeneral" />
         </EntityType>
-        <EntityType Name="QuestionFORPassage" BaseType="DataEntity.QuestionFORDanxuan">
+        <EntityType Name="QuestionFORPassage" BaseType="EntityNameSpace.QuestionFORDanxuan">
           <Property Name="QuestionFORPassageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="QuestionFORPassageExtendDanxuanId" Type="Int32" Nullable="false" />
           <Property Name="PassageId" Type="Int32" />
           <NavigationProperty Name="Passage" Relationship="Self.FK__QuestionF__Passa__1332DBDC" FromRole="QuestionFORPassage" ToRole="Passage" />
-          <NavigationProperty Name="QuestionFORDanxuanFROMParent" Relationship="Self.FK__QuestionF__Quest__123EB7A3" FromRole="QuestionFORPassage" ToRole="QuestionFORDanxuan" />
+          <NavigationProperty Name="QuestionFORDanxuanExtendParent" Relationship="Self.FK__QuestionF__Quest__123EB7A3" FromRole="QuestionFORPassage" ToRole="QuestionFORDanxuan" />
         </EntityType>
         <EntityType Name="QuestionType">
           <Key>
@@ -1957,7 +1957,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataEntityConn" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EntitiesConn" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Authority" EntityType="Self.Authority" />
           <EntitySet Name="Chapter" EntityType="Self.Chapter" />
           <EntitySet Name="Comment" EntityType="Self.Comment" />
@@ -2163,9 +2163,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DataEntityStoreContainer" CdmEntityContainer="DataEntityConn">
+        <EntityContainerMapping StorageEntityContainer="EntityNameSpaceStoreContainer" CdmEntityContainer="EntitiesConn">
           <EntitySetMapping Name="Authority">
-            <EntityTypeMapping TypeName="DataEntity.Authority">
+            <EntityTypeMapping TypeName="EntityNameSpace.Authority">
               <MappingFragment StoreEntitySet="Authority">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AuthorityName" ColumnName="AuthorityName" />
@@ -2177,7 +2177,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Chapter">
-            <EntityTypeMapping TypeName="DataEntity.Chapter">
+            <EntityTypeMapping TypeName="EntityNameSpace.Chapter">
               <MappingFragment StoreEntitySet="Chapter">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ChapterName" ColumnName="ChapterName" />
@@ -2188,7 +2188,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Comment">
-            <EntityTypeMapping TypeName="DataEntity.Comment">
+            <EntityTypeMapping TypeName="EntityNameSpace.Comment">
               <MappingFragment StoreEntitySet="Comment">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
@@ -2203,7 +2203,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Difficulty">
-            <EntityTypeMapping TypeName="DataEntity.Difficulty">
+            <EntityTypeMapping TypeName="EntityNameSpace.Difficulty">
               <MappingFragment StoreEntitySet="Difficulty">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="DifficultyRatio" ColumnName="DifficultyRatio" />
@@ -2213,7 +2213,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ExamZone">
-            <EntityTypeMapping TypeName="DataEntity.ExamZone">
+            <EntityTypeMapping TypeName="EntityNameSpace.ExamZone">
               <MappingFragment StoreEntitySet="ExamZone">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ExamZoneName" ColumnName="ExamZoneName" />
@@ -2222,7 +2222,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Level">
-            <EntityTypeMapping TypeName="DataEntity.Level">
+            <EntityTypeMapping TypeName="EntityNameSpace.Level">
               <MappingFragment StoreEntitySet="Level">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="LevelName" ColumnName="LevelName" />
@@ -2231,7 +2231,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LogLogin">
-            <EntityTypeMapping TypeName="DataEntity.LogLogin">
+            <EntityTypeMapping TypeName="EntityNameSpace.LogLogin">
               <MappingFragment StoreEntitySet="LogLogin">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2245,7 +2245,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LogPractice">
-            <EntityTypeMapping TypeName="DataEntity.LogPractice">
+            <EntityTypeMapping TypeName="EntityNameSpace.LogPractice">
               <MappingFragment StoreEntitySet="LogPractice">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2257,7 +2257,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LogTest">
-            <EntityTypeMapping TypeName="DataEntity.LogTest">
+            <EntityTypeMapping TypeName="EntityNameSpace.LogTest">
               <MappingFragment StoreEntitySet="LogTest">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2269,7 +2269,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LogTestUserAnswer">
-            <EntityTypeMapping TypeName="DataEntity.LogTestUserAnswer">
+            <EntityTypeMapping TypeName="EntityNameSpace.LogTestUserAnswer">
               <MappingFragment StoreEntitySet="LogTestUserAnswer">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="LogTestId" ColumnName="LogTestId" />
@@ -2280,7 +2280,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PaperCode">
-            <EntityTypeMapping TypeName="DataEntity.PaperCode">
+            <EntityTypeMapping TypeName="EntityNameSpace.PaperCode">
               <MappingFragment StoreEntitySet="PaperCode">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="LevelId" ColumnName="LevelId" />
@@ -2295,7 +2295,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Passage">
-            <EntityTypeMapping TypeName="DataEntity.Passage">
+            <EntityTypeMapping TypeName="EntityNameSpace.Passage">
               <MappingFragment StoreEntitySet="Passage">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PassageContent" ColumnName="PassageContent" />
@@ -2304,7 +2304,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PastExamPaper">
-            <EntityTypeMapping TypeName="DataEntity.PastExamPaper">
+            <EntityTypeMapping TypeName="EntityNameSpace.PastExamPaper">
               <MappingFragment StoreEntitySet="PastExamPaper">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ExamZoneId" ColumnName="ExamZoneId" />
@@ -2315,7 +2315,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QuestionFORGeneral">
-            <EntityTypeMapping TypeName="IsTypeOf(DataEntity.QuestionFORGeneral)">
+            <EntityTypeMapping TypeName="IsTypeOf(EntityNameSpace.QuestionFORGeneral)">
               <MappingFragment StoreEntitySet="QuestionFORGeneral">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
@@ -2336,7 +2336,7 @@
                 <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
               </MappingFragment>
             </EntityTypeMapping>
-            <EntityTypeMapping TypeName="IsTypeOf(DataEntity.QuestionFORDanxuan)">
+            <EntityTypeMapping TypeName="IsTypeOf(EntityNameSpace.QuestionFORDanxuan)">
               <MappingFragment StoreEntitySet="QuestionFORDanxuan">
                 <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
                 <ScalarProperty Name="AnswerD" ColumnName="AnswerD" />
@@ -2347,14 +2347,14 @@
                 <ScalarProperty Name="QuestionFORDanxuanId" ColumnName="QuestionFORDanxuanId" />
               </MappingFragment>
             </EntityTypeMapping>
-            <EntityTypeMapping TypeName="IsTypeOf(DataEntity.QuestionFORPanduan)">
+            <EntityTypeMapping TypeName="IsTypeOf(EntityNameSpace.QuestionFORPanduan)">
               <MappingFragment StoreEntitySet="QuestionFORPanduan">
                 <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
                 <ScalarProperty Name="QuestionFORGeneralId" ColumnName="QuestionFORGeneralId" />
                 <ScalarProperty Name="QuestionFORPanduanId" ColumnName="QuestionFORPanduanId" />
               </MappingFragment>
             </EntityTypeMapping>
-            <EntityTypeMapping TypeName="IsTypeOf(DataEntity.QuestionFORPassage)">
+            <EntityTypeMapping TypeName="IsTypeOf(EntityNameSpace.QuestionFORPassage)">
               <MappingFragment StoreEntitySet="QuestionFORPassage">
                 <ScalarProperty Name="PassageId" ColumnName="PassageId" />
                 <ScalarProperty Name="QuestionFORPassageExtendDanxuanId" ColumnName="QuestionFORPassageExtendDanxuanId" />
@@ -2363,7 +2363,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="QuestionType">
-            <EntityTypeMapping TypeName="DataEntity.QuestionType">
+            <EntityTypeMapping TypeName="EntityNameSpace.QuestionType">
               <MappingFragment StoreEntitySet="QuestionType">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="QuestionTypeDescrip" ColumnName="QuestionTypeDescrip" />
@@ -2372,7 +2372,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StationMail">
-            <EntityTypeMapping TypeName="DataEntity.StationMail">
+            <EntityTypeMapping TypeName="EntityNameSpace.StationMail">
               <MappingFragment StoreEntitySet="StationMail">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="StationMailParentId" ColumnName="StationMailParentId" />
@@ -2386,7 +2386,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Subject">
-            <EntityTypeMapping TypeName="DataEntity.Subject">
+            <EntityTypeMapping TypeName="EntityNameSpace.Subject">
               <MappingFragment StoreEntitySet="Subject">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
@@ -2395,7 +2395,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SuggestionKeyword">
-            <EntityTypeMapping TypeName="DataEntity.SuggestionKeyword">
+            <EntityTypeMapping TypeName="EntityNameSpace.SuggestionKeyword">
               <MappingFragment StoreEntitySet="SuggestionKeyword">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Keyword" ColumnName="Keyword" />
@@ -2405,7 +2405,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Syllabus">
-            <EntityTypeMapping TypeName="DataEntity.Syllabus">
+            <EntityTypeMapping TypeName="EntityNameSpace.Syllabus">
               <MappingFragment StoreEntitySet="Syllabus">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PaperCodeId" ColumnName="PaperCodeId" />
@@ -2415,7 +2415,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserAuthority">
-            <EntityTypeMapping TypeName="DataEntity.UserAuthority">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserAuthority">
               <MappingFragment StoreEntitySet="UserAuthority">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AuthorityId" ColumnName="AuthorityId" />
@@ -2426,7 +2426,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserCreatePaper">
-            <EntityTypeMapping TypeName="DataEntity.UserCreatePaper">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserCreatePaper">
               <MappingFragment StoreEntitySet="UserCreatePaper">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2437,7 +2437,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserCreatePaperQuestione">
-            <EntityTypeMapping TypeName="DataEntity.UserCreatePaperQuestione">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserCreatePaperQuestione">
               <MappingFragment StoreEntitySet="UserCreatePaperQuestione">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserCreatePaperId" ColumnName="UserCreatePaperId" />
@@ -2446,7 +2446,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserGroup">
-            <EntityTypeMapping TypeName="DataEntity.UserGroup">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserGroup">
               <MappingFragment StoreEntitySet="UserGroup">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
@@ -2455,7 +2455,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserRank">
-            <EntityTypeMapping TypeName="DataEntity.UserRank">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserRank">
               <MappingFragment StoreEntitySet="UserRank">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserRankName" ColumnName="UserRankName" />
@@ -2465,7 +2465,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="DataEntity.Users">
+            <EntityTypeMapping TypeName="EntityNameSpace.Users">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -2483,7 +2483,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserScoreDetail">
-            <EntityTypeMapping TypeName="DataEntity.UserScoreDetail">
+            <EntityTypeMapping TypeName="EntityNameSpace.UserScoreDetail">
               <MappingFragment StoreEntitySet="UserScoreDetail">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
@@ -2493,7 +2493,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VerifyStatus">
-            <EntityTypeMapping TypeName="DataEntity.VerifyStatus">
+            <EntityTypeMapping TypeName="EntityNameSpace.VerifyStatus">
               <MappingFragment StoreEntitySet="VerifyStatus">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />

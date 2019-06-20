@@ -19,6 +19,6 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
         public Nullable<int> PassageId { get; set; }
     
         public virtual Passage Passage { get; set; }
-        public virtual QuestionFORDanxuan QuestionFORDanxuanFROMParent { get; set; }
+        public virtual QuestionFORDanxuan QuestionFORDanxuanExtendParent { get; set; }
     }
 }

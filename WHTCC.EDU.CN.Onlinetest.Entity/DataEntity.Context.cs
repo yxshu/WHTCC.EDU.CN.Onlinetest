@@ -13,10 +13,10 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataEntityConn : DbContext
+    public partial class EntitiesConn : DbContext
     {
-        public DataEntityConn()
-            : base("name=DataEntityConn")
+        public EntitiesConn()
+            : base("name=EntitiesConn")
         {
         }
     

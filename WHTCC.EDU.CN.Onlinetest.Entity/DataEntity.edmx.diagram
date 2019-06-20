@@ -4,83 +4,83 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d90edfcda7224e24881e59bc098cbf0c" Name="Diagram1">
-        <EntityTypeShape EntityType="DataEntity.Authority" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Chapter" Width="1.5" PointX="9" PointY="15.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Comment" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Difficulty" Width="1.5" PointX="6" PointY="29.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.ExamZone" Width="1.5" PointX="6.75" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Level" Width="1.5" PointX="3.75" PointY="32.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.LogLogin" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.LogPractice" Width="1.5" PointX="8.25" PointY="23" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.LogTest" Width="1.5" PointX="8.25" PointY="18.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.LogTestUserAnswer" Width="1.5" PointX="16.5" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.PaperCode" Width="1.5" PointX="6" PointY="32.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Passage" Width="1.5" PointX="13.5" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.PastExamPaper" Width="1.5" PointX="9" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.QuestionFORDanxuan" Width="2.375" PointX="13.875" PointY="21.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.QuestionFORGeneral" Width="2.5" PointX="10.875" PointY="20.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.QuestionFORPanduan" Width="2.125" PointX="13.875" PointY="25.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.QuestionFORPassage" Width="3.5" PointX="15.75" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.QuestionType" Width="1.5" PointX="9" PointY="30.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.StationMail" Width="1.5" PointX="5.25" PointY="43" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Subject" Width="1.5" PointX="3.75" PointY="35" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.SuggestionKeyword" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Syllabus" Width="1.5" PointX="14.25" PointY="27.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserAuthority" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserCreatePaper" Width="1.5" PointX="8.25" PointY="26.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserCreatePaperQuestione" Width="1.5" PointX="16.5" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserGroup" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserRank" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.Users" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.UserScoreDetail" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataEntity.VerifyStatus" Width="1.5" PointX="13.5" PointY="17.875" IsExpanded="true" />
-        <AssociationConnector Association="DataEntity.FK__UserAutho__Autho__4E88ABD4" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Chapt__07C12930" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Syllabus__Chapte__6C190EBB" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Comment__DeleteU__2180FB33" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Comment__Questio__1CBC4616" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Comment__QuoteCo__1F98B2C1" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Comment__UserId__1DB06A4F" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Diffi__00200768" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserCreat__Diffi__2645B050" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__PastExamP__ExamZ__70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__PaperCode__Level__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogLogin__UserId__3C34F16F" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogPracti__Quest__2EDAF651" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogPracti__UserI__2DE6D218" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogTest__UserCre__339FAB6E" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogTest__UserId__32AB8735" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogTestUs__LogTe__3864608B" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__LogTestUs__Quest__395884C4" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__PaperCode__Subje__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__PastExamP__Paper__71D1E811" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Paper__06CD04F7" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Syllabus__PaperC__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserCreat__Paper__25518C17" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Passa__1332DBDC" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__PastE__08B54D69" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Quest__0E6E26BF" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Quest__123EB7A3" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Quest__0B91BA14" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__Quest__7F2BE32F" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__QuestionF__UserI__01142BA1" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserCreat__Quest__2B0A656D" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__VerifySta__NewQu__19DFD96B" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__VerifySta__Quest__160F4887" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__StationMa__Stati__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__StationMa__Stati__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserAutho__UserG__4F7CD00D" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserAutho__UserR__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserScore__UserA__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserCreat__UserC__2A164134" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserCreat__UserI__245D67DE" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__Users__UserGroup__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__UserScore__UserI__534D60F1" ManuallyRouted="false" />
-        <AssociationConnector Association="DataEntity.FK__VerifySta__UserI__17036CC0" ManuallyRouted="false" />
-        <InheritanceConnector EntityType="DataEntity.QuestionFORDanxuan" />
-        <InheritanceConnector EntityType="DataEntity.QuestionFORPanduan" />
-        <InheritanceConnector EntityType="DataEntity.QuestionFORPassage" />
+      <Diagram DiagramId="aa9661d02c9246b587ff2184130a3fa7" Name="Diagram1">
+        <EntityTypeShape EntityType="EntityNameSpace.Authority" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Chapter" Width="1.5" PointX="9" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Comment" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Difficulty" Width="1.5" PointX="6" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.ExamZone" Width="1.5" PointX="6.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Level" Width="1.5" PointX="3.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.LogLogin" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.LogPractice" Width="1.5" PointX="8.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.LogTest" Width="1.5" PointX="8.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.LogTestUserAnswer" Width="1.5" PointX="17" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.PaperCode" Width="1.5" PointX="6" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Passage" Width="1.5" PointX="13.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.PastExamPaper" Width="1.5" PointX="9" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.QuestionFORDanxuan" Width="2.125" PointX="14.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.QuestionFORGeneral" Width="2.5" PointX="11.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.QuestionFORPanduan" Width="2.125" PointX="14.125" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.QuestionFORPassage" Width="4.25" PointX="15.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.QuestionType" Width="1.5" PointX="9" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.StationMail" Width="1.5" PointX="5.25" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Subject" Width="1.5" PointX="3.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.SuggestionKeyword" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Syllabus" Width="1.5" PointX="14.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserAuthority" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserCreatePaper" Width="1.5" PointX="8.25" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserCreatePaperQuestione" Width="1.5" PointX="16.5" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserGroup" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserRank" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.Users" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.UserScoreDetail" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityNameSpace.VerifyStatus" Width="1.5" PointX="13.5" PointY="17.875" IsExpanded="true" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserAutho__Autho__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Chapt__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Syllabus__Chapte__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Comment__DeleteU__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Comment__Questio__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Comment__QuoteCo__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Comment__UserId__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Diffi__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserCreat__Diffi__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__PastExamP__ExamZ__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__PaperCode__Level__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogLogin__UserId__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogPracti__Quest__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogPracti__UserI__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogTest__UserCre__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogTest__UserId__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogTestUs__LogTe__3864608B" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__LogTestUs__Quest__395884C4" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__PaperCode__Subje__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__PastExamP__Paper__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Paper__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Syllabus__PaperC__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserCreat__Paper__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Passa__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__PastE__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Quest__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Quest__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Quest__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__Quest__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__QuestionF__UserI__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserCreat__Quest__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__VerifySta__NewQu__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__VerifySta__Quest__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__StationMa__Stati__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__StationMa__Stati__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserAutho__UserG__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserAutho__UserR__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserScore__UserA__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserCreat__UserC__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserCreat__UserI__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__Users__UserGroup__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__UserScore__UserI__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityNameSpace.FK__VerifySta__UserI__17036CC0" ManuallyRouted="false" />
+        <InheritanceConnector EntityType="EntityNameSpace.QuestionFORDanxuan" />
+        <InheritanceConnector EntityType="EntityNameSpace.QuestionFORPanduan" />
+        <InheritanceConnector EntityType="EntityNameSpace.QuestionFORPassage" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
