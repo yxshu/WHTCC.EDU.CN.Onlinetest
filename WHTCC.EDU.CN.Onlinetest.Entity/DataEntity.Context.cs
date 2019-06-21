@@ -13,10 +13,10 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntitiesConn : DbContext
+    public partial class DataEntityConn : DbContext
     {
-        public EntitiesConn()
-            : base("name=EntitiesConn")
+        public DataEntityConn()
+            : base("name=DataEntityConn")
         {
         }
     
@@ -38,7 +38,10 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
         public virtual DbSet<PaperCode> PaperCode { get; set; }
         public virtual DbSet<Passage> Passage { get; set; }
         public virtual DbSet<PastExamPaper> PastExamPaper { get; set; }
+        public virtual DbSet<QuestionFORDanxuan> QuestionFORDanxuan { get; set; }
         public virtual DbSet<QuestionFORGeneral> QuestionFORGeneral { get; set; }
+        public virtual DbSet<QuestionFORPanduan> QuestionFORPanduan { get; set; }
+        public virtual DbSet<QuestionFORPassage> QuestionFORPassage { get; set; }
         public virtual DbSet<QuestionType> QuestionType { get; set; }
         public virtual DbSet<StationMail> StationMail { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }

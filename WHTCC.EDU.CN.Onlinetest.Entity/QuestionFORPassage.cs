@@ -12,13 +12,13 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class QuestionFORPassage : QuestionFORDanxuan
+    public partial class QuestionFORPassage
     {
         public int QuestionFORPassageId { get; set; }
         public int QuestionFORPassageExtendDanxuanId { get; set; }
         public Nullable<int> PassageId { get; set; }
     
         public virtual Passage Passage { get; set; }
-        public virtual QuestionFORDanxuan QuestionFORDanxuanExtendParent { get; set; }
+        public virtual QuestionFORDanxuan QuestionFORDanxuan { get; set; }
     }
 }

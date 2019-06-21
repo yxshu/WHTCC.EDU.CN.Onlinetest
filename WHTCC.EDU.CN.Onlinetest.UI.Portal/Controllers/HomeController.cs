@@ -11,6 +11,15 @@ namespace WHTCC.EDU.CN.Onlinetest.UI.Portal.Controllers
     {
         public ActionResult Index()
         {
+            SuggestionKeyword keyword = new SuggestionKeyword();
+            keyword.Keyword = "key";
+           // keyword.SuggestionKeywordCreateTime = DateTime.Now;
+            keyword.SuggestionKeywordNum = 100;
+            DataEntityConn context = new DataEntityConn();
+            context.SuggestionKeyword.Add(keyword);
+            context.SaveChanges();
+            System.Diagnostics.Debug.WriteLine(keyword.Keyword);
+            ViewBag.Title =keyword.Keyword;
             return View();
         }
 

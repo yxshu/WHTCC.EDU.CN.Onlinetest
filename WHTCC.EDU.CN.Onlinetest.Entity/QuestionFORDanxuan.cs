@@ -12,7 +12,7 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class QuestionFORDanxuan : QuestionFORGeneral
+    public partial class QuestionFORDanxuan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public QuestionFORDanxuan()

@@ -12,7 +12,7 @@ namespace WHTCC.EDU.CN.Onlinetest.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class QuestionFORPanduan : QuestionFORGeneral
+    public partial class QuestionFORPanduan
     {
         public int QuestionFORPanduanId { get; set; }
         public int QuestionFORGeneralId { get; set; }
